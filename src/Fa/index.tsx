@@ -90,13 +90,13 @@ export default function Fa (props: SolidFaProps) {
                   d={i()[4][0]}
                   fill={props.secondaryColor || props.color || 'currentColor'}
                   fill-opacity={props.swapOpacity != false ? props.primaryOpacity : props.secondaryOpacity}
-                  transform={`translate(${i[0] / -2} ${i[1] / -2})`}
+                  transform={`translate(${i()[0] / -2} ${i()[1] / -2})`}
                 />
                 <path
                   d={i()[4][1]}
                   fill={props.primaryColor || props.color || 'currentColor'}
                   fill-opacity={props.swapOpacity != false ? props.secondaryOpacity : props.primaryOpacity}
-                  transform={`translate(${i[0] / -2} ${i[1] / -2})`}
+                  transform={`translate(${i()[0] / -2} ${i()[1] / -2})`}
                 />
               </>
             )}
@@ -104,7 +104,7 @@ export default function Fa (props: SolidFaProps) {
             <path
               d={i()[4] as string}
               fill={props.color || props.primaryColor || 'currentColor'}
-              transform={`translate(${i[0] / -2} ${i[1] / -2})`}
+              transform={`translate(${i()[0] / -2} ${i()[1] / -2})`}
             />
           </Show>
         </g>
