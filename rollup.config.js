@@ -25,7 +25,7 @@ export default [
     input: 'src/index.ts',
     output: [
       {
-        file: pkg.browser,
+        file: pkg.jsdelivr,
         format: 'iife',
         name: 'SolidFa'
       }
