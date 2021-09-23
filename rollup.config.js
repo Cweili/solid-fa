@@ -22,7 +22,7 @@ const commonPlugins = [
 
 export default [
   {
-    input: pkg.main,
+    input: 'src/index.ts',
     output: [
       {
         file: pkg.browser,
@@ -36,16 +36,20 @@ export default [
     ]
   },
   {
-    input: pkg.main,
+    input: 'src/index.ts',
     output: [
       {
         file: pkg.module,
         format: 'es'
       },
       {
-        file: pkg.browser.replace(/\.js$/, '.cjs.js'),
+        file: pkg.main,
         format: 'cjs'
       }
+    ],
+    external: [
+      'solid-js',
+      'solid-js/web',
     ],
     plugins: [
       ...commonPlugins

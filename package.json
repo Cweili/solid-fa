@@ -70,5 +70,8 @@
     "sirv-cli": "^1.0.0",
     "solid-js": "^1.1.5",
     "typescript": "^4.4.3"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.0.0"
   }
 }
