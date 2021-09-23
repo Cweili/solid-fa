@@ -1,6 +1,6 @@
 {
   "name": "solid-fa",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tiny FontAwesome 5 component for SolidJS",
   "keywords": [
     "fontawesome",
