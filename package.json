@@ -3,15 +3,16 @@
   "version": "0.0.4",
   "description": "Tiny FontAwesome 5 component for SolidJS",
   "keywords": [
+    "component",
+    "icon",
+    "svg",
+    "duotone",
     "fontawesome",
     "font-awesome",
     "solid",
     "solidjs",
-    "solid.js",
-    "component",
-    "icon",
-    "svg",
-    "duotone"
+    "solid-js",
+    "solid.js"
   ],
   "repository": {
     "type": "git",
@@ -25,7 +26,7 @@
   },
   "jsdelivr": "dist/solid-fa.js",
   "unpkg": "dist/solid-fa.js",
-  "module": "dist/solid-fa.mjs",
+  "module": "dist/solid-fa.esm.js",
   "main": "dist/solid-fa.cjs.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
