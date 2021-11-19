@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.layers :global(.fa) {
+.layers :global(.solid-fa) {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -13,13 +13,13 @@
   text-align: center;
 }
 
-.layers :global(.layers-text) {
+.layers :global(.solid-fa-layers-text) {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.layers :global(.layers-text span) {
+.layers :global(.solid-fa-layers-text span) {
   display: inline-block;
 }

@@ -68,7 +68,7 @@ export default function Fa (props: SolidFaProps) {
   return (
     <svg
       classList={{
-        fa: true,
+        'solid-fa': true,
         [style.spin]: props.spin,
         [style.pulse]: props.pulse,
       }}
