@@ -53,7 +53,7 @@
     "@rollup/plugin-replace": "^4.0.0",
     "@types/jest": "^27.0.2",
     "babel-eslint": "^10.0.2",
-    "babel-jest": "^27.0.2",
+    "babel-jest": "^28.1.2",
     "babel-plugin-react": "^1.0.0",
     "babel-preset-solid": "^1.1.5",
     "eslint": "^7.32.0",
