@@ -43,6 +43,11 @@ interface SolidFaProps {
   spin?: boolean
   pulse?: boolean
 
+  class?: string
+  classList?: {
+      [k: string]: boolean | undefined
+  } | undefined
+
   // Duotone Icons
   primaryColor?: string
   secondaryColor?: string
@@ -71,7 +76,9 @@ export default function Fa (props: SolidFaProps) {
         'solid-fa': true,
         [style.spin]: props.spin,
         [style.pulse]: props.pulse,
+        ...props.classList
       }}
+      class={props.class}
       style={s()}
       viewBox={`0 0 ${i()[0]} ${i()[1]}`}
       aria-hidden="true"
