@@ -10,8 +10,9 @@
 <!-- [![build][badge-build]][workflows]
 [![coverage][badge-coverage]][coveralls] -->
 
-Tiny [FontAwesome 5][fontawesome] component for [SolidJS][solid].
+Tiny [FontAwesome][fontawesome] component for [SolidJS][solid].
 
+* FontAwesome version 5 and 6
 * FontAwesome svg icons
 * Tree-shakable, only import used icons
 * No CSS file required
