@@ -7,11 +7,12 @@
 
 
 [![github][badge-issues]][github]
-[![build][badge-build]][travis]
-[![coverage][badge-coverage]][coveralls]
+<!-- [![build][badge-build]][workflows]
+[![coverage][badge-coverage]][coveralls] -->
 
-Tiny [FontAwesome 5][fontawesome] component for [SolidJS][solid].
+Tiny [FontAwesome][fontawesome] component for [SolidJS][solid].
 
+* FontAwesome version 5 and 6
 * FontAwesome svg icons
 * Tree-shakable, only import used icons
 * No CSS file required
@@ -181,8 +182,8 @@ function App (props) {
 [badge-issues]: https://img.shields.io/github/issues/Cweili/solid-fa.svg
 [github]: https://github.com/Cweili/solid-fa
 
-[badge-build]: https://img.shields.io/travis/com/Cweili/solid-fa/master.svg
-[travis]: https://travis-ci.com/Cweili/solid-fa
+[badge-build]: https://img.shields.io/github/actions/workflow/status/Cweili/solid-fa/ci.yml?branch=master
+[workflows]: https://github.com/Cweili/solid-fa/actions/workflows/ci.yml?query=branch%3Amaster
 
 [badge-coverage]: https://img.shields.io/coveralls/github/Cweili/solid-fa/master.svg
 [coveralls]: https://coveralls.io/github/Cweili/solid-fa?branch=master
