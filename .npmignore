@@ -1,7 +1,8 @@
 # Build config
 .github
 .travis.yml
-rollup.config.js
+vite.config.ts
+vitest.config.ts
 
 # Test
 test

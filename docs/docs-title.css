@@ -1,0 +1,12 @@
+a,
+a:visited {
+  color: currentColor;
+}
+
+small {
+  visibility: hidden;
+}
+
+a:hover + small {
+  visibility: visible;
+}

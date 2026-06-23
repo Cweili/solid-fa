@@ -1,0 +1,23 @@
+.hero {
+  background: var(--pico-card-background-color);
+  margin-bottom: var(--pico-block-spacing-vertical);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+}
+
+.hue {
+  color: #238ae6;
+  animation: hue 30s infinite linear;
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}

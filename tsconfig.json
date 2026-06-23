@@ -3,6 +3,7 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "noEmit": true,
+    "declaration": true,
     "baseUrl": ".",
     "allowJs": true,
     "target": "esnext",
@@ -10,7 +11,7 @@
     "strict": true,
     "importHelpers": true,
     "noImplicitAny": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -24,6 +25,6 @@
     ]
   },
   "include": [
-    "src"
+    "src/**/*"
   ]
 }

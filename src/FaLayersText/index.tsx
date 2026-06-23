@@ -62,7 +62,7 @@ export default function FaLayersText (props: FaLayersTextProps) {
   }))
 
   return (
-    <span className='solid-fa-layers-text'>
+    <span class='solid-fa-layers-text'>
       <span style={s()}>
         {props.children}
       </span>
