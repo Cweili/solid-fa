@@ -8,6 +8,7 @@ import {
 import {
   getStyles,
   getTransform,
+  mergeStyles,
 } from '../utils';
 
 import style from './style.module.css'
@@ -54,6 +55,8 @@ interface SolidFaProps {
   primaryOpacity?: number | string
   secondaryOpacity?: number | string
   swapOpacity?: boolean
+
+  style?: string | { [k: string]: any }
 }
 
 
@@ -67,7 +70,10 @@ export default function Fa (props: SolidFaProps) {
   }, props)
 
   const i = createMemo(() => props.icon?.icon || [0, 0, '', [], ''])
-  const s = createMemo(() => getStyles(props.size, props.pull, props.fw))
+  const s = createMemo(() => mergeStyles(
+    props.icon?.icon ? getStyles(props.size, props.pull, props.fw) : {},
+    props.style,
+  ))
   const transform = createMemo(() => getTransform(props.scale, props.translateX, props.translateY, props.rotate, props.flip, 512))
 
   return (

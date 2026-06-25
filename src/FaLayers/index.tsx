@@ -5,6 +5,7 @@ import {
 
 import {
   getStyles,
+  mergeStyles,
 } from '../utils';
 
 import style from './style.module.css'
@@ -26,10 +27,14 @@ interface FaLayersProps {
     | '10x'
   pull?: 'left' | 'right'
   children?: JSX.Element
+  style?: string | { [k: string]: any }
 }
 
 export default function FaLayers (props: FaLayersProps) {
-  const s = createMemo(() => getStyles(props.size, props.pull, true))
+  const s = createMemo(() => mergeStyles(
+    getStyles(props.size, props.pull, true),
+    props.style,
+  ))
 
   return (
     <span

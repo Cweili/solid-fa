@@ -7,6 +7,7 @@ import {
 import {
   getStyles,
   getTransform,
+  mergeStyles,
 } from '../utils';
 
 interface FaLayersTextProps {
@@ -33,6 +34,7 @@ interface FaLayersTextProps {
   flip?: 'horizontal' | 'vertical' | 'both'
 
   children?: JSX.Element
+  style?: string | { [k: string]: any }
 }
 
 export default function FaLayersText (props: FaLayersTextProps) {
@@ -42,9 +44,9 @@ export default function FaLayersText (props: FaLayersTextProps) {
     translateY: 0,
   }, props)
 
-  const s = createMemo(() => ({
-    ...getStyles(props.size),
-    ...{
+  const s = createMemo(() => mergeStyles(
+    {
+      ...getStyles(props.size),
       color: props.color,
       display: 'inline-block',
       height: 'auto',
@@ -58,8 +60,9 @@ export default function FaLayersText (props: FaLayersTextProps) {
         'em',
         'deg',
       ),
-    }
-  }))
+    },
+    props.style,
+  ))
 
   return (
     <span class='solid-fa-layers-text'>

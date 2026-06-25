@@ -15,6 +15,39 @@ export function joinCss (obj, separator = ';'): string {
   return texts.join(separator)
 }
 
+function toKebabCase (str: string): string {
+  return str.replace(/([A-Z])/g, '-$1').toLowerCase();
+}
+
+function parseStyle (style: string): { [k: string]: string } {
+  const result: { [k: string]: string } = {};
+  style.split(';').forEach((part) => {
+    const [key, value] = part.split(':');
+    if (key && value) {
+      result[key.trim()] = value.trim();
+    }
+  });
+  return result;
+}
+
+function convertKeysToKebabCase (obj: { [k: string]: any }): { [k: string]: any } {
+  const result: { [k: string]: any } = {};
+  for (const key in obj) {
+    result[toKebabCase(key)] = obj[key];
+  }
+  return result;
+}
+
+export function mergeStyles (internal: { [k: string]: any }, style?: string | { [k: string]: any }): { [k: string]: any } {
+  if (!style) {
+    return internal;
+  }
+  if (typeof style === 'string') {
+    return { ...internal, ...parseStyle(style) };
+  }
+  return { ...internal, ...convertKeysToKebabCase(style) };
+}
+
 export function getStyles (size?, pull?, fw?): { [k: string]: any } {
   let float
   let width
