@@ -220,10 +220,6 @@ export default function Docs() {
       <DocsTitle title="Installation" />
       <DocsCode code={codes.installation[0]} />
       <DocsCode code={codes.installation[1]} lang="js" />
-      <article>
-        <Fa icon={faInfo} fw />
-        for SolidJS, uses solid-fa
-      </article>
 
       <DocsTitle title="Basic Use" />
       <article><Fa icon={faFlag} /> Flag</article>

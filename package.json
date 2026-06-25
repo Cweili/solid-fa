@@ -34,6 +34,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
+      "solid": "./dist/solid-fa.esm.js",
       "import": "./dist/solid-fa.esm.js",
       "require": "./dist/solid-fa.cjs.js",
       "default": "./dist/solid-fa.js"

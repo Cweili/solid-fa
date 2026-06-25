@@ -10,7 +10,16 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   plugins: [
     solidPlugin(),
-    cssInjectedByJsPlugin(),
+    cssInjectedByJsPlugin({
+      injectCode: (cssCode, options) => {
+        return `try{if(typeof document!='undefined'&&typeof document.createElement==='function'){` +
+          `var elementStyle=document.createElement('style');` +
+          (options.styleId ? `elementStyle.id="${options.styleId}";` : '') +
+          `elementStyle.appendChild(document.createTextNode(${cssCode}));` +
+          `typeof document.head!=='undefined'&&document.head.appendChild(elementStyle);` +
+          `}}catch(e){}`;
+      },
+    }),
     dts({
       tsconfigPath: './tsconfig.json',
       outDir: 'dist',
