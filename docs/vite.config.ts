@@ -7,6 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   root: __dirname,
+  base: '/solid-fa/',
   plugins: [solidPlugin()],
   build: {
     outDir: resolve(__dirname, 'dist'),
