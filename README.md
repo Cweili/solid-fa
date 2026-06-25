@@ -163,6 +163,23 @@ function App (props) {
 }
 ```
 
+## SSR (Server-Side Rendering)
+
+solid-fa is compatible with SSR frameworks like [Solid Start](https://start.solidjs.com/) and [TanStack Start](https://tanstack.com/start).
+
+### Usage with SSR
+
+```jsx
+import Fa from 'solid-fa'
+import { faFlag } from '@fortawesome/free-solid-svg-icons'
+
+function App () {
+  return <Fa icon={faFlag} />
+}
+```
+
+No additional configuration is needed — solid-fa automatically detects the SSR environment and skips client-only DOM operations.
+
 [fontawesome]: https://fontawesome.com/
 [fontawesome-npm]: https://www.npmjs.com/search?q=%40fortawesome%20svg%20icons
 [solid]: https://www.solidjs.com/

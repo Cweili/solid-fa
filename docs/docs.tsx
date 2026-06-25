@@ -374,6 +374,23 @@ export default function Docs() {
       <DocsImg src={duotone7} alt="duotone icons advanced use" />
       <DocsCode code={codes.duotoneIcons[8]} lang="js" />
       <DocsCode code={codes.duotoneIcons[9]} />
+
+      <DocsTitle title="SSR (Server-Side Rendering)" />
+      <article>
+        solid-fa is compatible with SSR frameworks like{' '}
+        <a href="https://start.solidjs.com/" target="_blank">Solid Start</a> and{' '}
+        <a href="https://tanstack.com/start" target="_blank">TanStack Start</a>.
+      </article>
+      <DocsTitle title="Usage with SSR" level={3} />
+      <DocsCode code={`import Fa from 'solid-fa'
+import { faFlag } from '@fortawesome/free-solid-svg-icons'
+
+function App() {
+  return <Fa icon={faFlag} />
+}`} lang="js" />
+      <article>
+        No additional configuration is needed — solid-fa automatically detects the SSR environment and skips client-only DOM operations.
+      </article>
     </div>
   );
 }
