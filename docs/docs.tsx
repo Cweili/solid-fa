@@ -30,7 +30,16 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import DocsCode from './docs-code';
+import DocsImg from './docs-img';
 import DocsTitle from './docs-title';
+import duotone0 from './assets/duotone-0.png';
+import duotone1 from './assets/duotone-1.png';
+import duotone2 from './assets/duotone-2.png';
+import duotone3 from './assets/duotone-3.png';
+import duotone4 from './assets/duotone-4.png';
+import duotone5 from './assets/duotone-5.png';
+import duotone6 from './assets/duotone-6.png';
+import duotone7 from './assets/duotone-7.png';
 
 const codes = {
   installation: [
@@ -156,7 +165,11 @@ Gatsby believed in the green light, the orgastic future that year by year recede
     `<Fa icon={faCamera} size="3x" />
 <Fa icon={faCamera} size="3x" swapOpacity />
 <Fa icon={faFireAlt} size="3x" />
-<Fa icon={faFireAlt} size="3x" swapOpacity />`,
+<Fa icon={faFireAlt} size="3x" swapOpacity />
+<Fa icon={faBusAlt} size="3x" />
+<Fa icon={faBusAlt} size="3x" swapOpacity />
+<Fa icon={faFillDrip} size="3x" />
+<Fa icon={faFillDrip} size="3x" swapOpacity />`,
     `<Fa icon={faBusAlt} size="3x" secondaryOpacity={0.2} />
 <Fa icon={faBusAlt} size="3x" secondaryOpacity={0.4} />
 <Fa icon={faBusAlt} size="3x" secondaryOpacity={0.6} />
@@ -170,7 +183,24 @@ Gatsby believed in the green light, the orgastic future that year by year recede
     `<Fa icon={faBusAlt} size="3x" primaryColor="gold" />
 <Fa icon={faBusAlt} size="3x" primaryColor="orangered" />
 <Fa icon={faFillDrip} size="3x" secondaryColor="limegreen" />
-<Fa icon={faFillDrip} size="3x" secondaryColor="rebeccapurple" />`,
+<Fa icon={faFillDrip} size="3x" secondaryColor="rebeccapurple" />
+<Fa icon={faBatteryFull} size="3x" primaryColor="limegreen" secondaryColor="dimgray" />
+<Fa icon={faBatteryQuarter} size="3x" primaryColor="orange" secondaryColor="dimgray" />`,
+    `<Fa icon={faBook} size="3x" secondaryOpacity={1} primaryColor="lightseagreen" secondaryColor="linen" />
+<Fa icon={faBookSpells} size="3x" secondaryOpacity={1} primaryColor="mediumpurple" secondaryColor="linen" />
+<Fa icon={faBookMedical} size="3x" secondaryOpacity={1} primaryColor="crimson" secondaryColor="linen" />
+<Fa icon={faBookUser} size="3x" secondaryOpacity={1} primaryColor="peru" secondaryColor="linen" />
+<Fa icon={faToggleOff} size="3x" secondaryOpacity={1} primaryColor="white" secondaryColor="gray" />
+<Fa icon={faToggleOn} size="3x" secondaryOpacity={1} primaryColor="dodgerblue" secondaryColor="white" />
+<Fa icon={faFilePlus} size="3x" secondaryOpacity={1} primaryColor="white" secondaryColor="limegreen" />
+<Fa icon={faFileExclamation} size="3x" secondaryOpacity={1} primaryColor="white" secondaryColor="gold" />
+<Fa icon={faFileTimes} size="3x" secondaryOpacity={1} primaryColor="white" secondaryColor="tomato" />`,
+    `<Fa icon={faCrow} size="3x" secondaryOpacity={1} primaryColor="dodgerblue" secondaryColor="gold" />
+<Fa icon={faCampfire} size="3x" secondaryOpacity={1} primaryColor="sienna" secondaryColor="red" />
+<Fa icon={faBirthdayCake} size="3x" secondaryOpacity={1} primaryColor="pink" secondaryColor="palevioletred" />
+<Fa icon={faEar} size="3x" secondaryOpacity={1} primaryColor="sandybrown" secondaryColor="bisque" />
+<Fa icon={faCorn} size="3x" secondaryOpacity={1} primaryColor="mediumseagreen" secondaryColor="gold" />
+<Fa icon={faCookieBite} size="3x" secondaryOpacity={1} primaryColor="saddlebrown" secondaryColor="burlywood" />`,
     `const themeRavenclaw = {
   secondaryOpacity: 1,
   primaryColor: '#0438a1',
@@ -178,7 +208,9 @@ Gatsby believed in the green light, the orgastic future that year by year recede
 }`,
     `<Fa icon={faHatWizard} size="3x" {...themeRavenclaw} />
 <Fa icon={faFlaskPotion} size="3x" {...themeRavenclaw} />
-<Fa icon={faWandMagic} size="3x" {...themeRavenclaw} />`,
+<Fa icon={faWandMagic} size="3x" {...themeRavenclaw} />
+<Fa icon={faScarf} size="3x" {...themeRavenclaw} />
+<Fa icon={faBookSpells} size="3x" {...themeRavenclaw} />`,
   ],
 };
 
@@ -324,18 +356,28 @@ export default function Docs() {
 
       <DocsTitle title="Duotone Icons" />
       <DocsTitle title="Basic Use" level={3} />
+      <DocsImg src={duotone0} alt="duotone icons basic use" />
       <DocsCode code={codes.duotoneIcons[0]} lang="js" />
       <DocsCode code={codes.duotoneIcons[1]} />
       <DocsTitle title="Swapping Layer Opacity" level={3} />
+      <DocsImg src={duotone1} alt="swapping duotone icons layer opacity" />
       <DocsCode code={codes.duotoneIcons[2]} />
       <DocsTitle title="Changing Opacity" level={3} />
+      <DocsImg src={duotone2} alt="changing duotone icons opacity" />
       <DocsCode code={codes.duotoneIcons[3]} />
+      <DocsImg src={duotone3} alt="changing duotone icons opacity" />
       <DocsCode code={codes.duotoneIcons[4]} />
       <DocsTitle title="Coloring Duotone Icons" level={3} />
+      <DocsImg src={duotone4} alt="coloring duotone icons" />
       <DocsCode code={codes.duotoneIcons[5]} />
       <DocsTitle title="Advanced Use" level={3} />
-      <DocsCode code={codes.duotoneIcons[6]} lang="js" />
+      <DocsImg src={duotone5} alt="duotone icons advanced use" />
+      <DocsCode code={codes.duotoneIcons[6]} />
+      <DocsImg src={duotone6} alt="duotone icons advanced use" />
       <DocsCode code={codes.duotoneIcons[7]} />
+      <DocsImg src={duotone7} alt="duotone icons advanced use" />
+      <DocsCode code={codes.duotoneIcons[8]} lang="js" />
+      <DocsCode code={codes.duotoneIcons[9]} />
     </div>
   );
 }
