@@ -3,10 +3,15 @@ a:visited {
   color: currentColor;
 }
 
-small {
+h1 small,
+h2 small,
+h3 small {
   visibility: hidden;
 }
 
+h1:hover small,
+h2:hover small,
+h3:hover small,
 a:hover + small {
   visibility: visible;
 }
