@@ -41,7 +41,7 @@
     }
   },
   "scripts": {
-    "build": "vite build && tsc -p tsconfig.jsx.json && node copy-css.mjs",
+    "build": "vite build && tsc -p tsconfig.jsx.json && cpy \"src/**/*.css\" dist",
     "build:docs": "vite build --config docs/vite.config.ts",
     "dev": "vite --config docs/vite.config.ts",
     "test": "vitest run --coverage",
@@ -54,6 +54,7 @@
     "@fortawesome/fontawesome-common-types": "6.5.2",
     "@fortawesome/free-solid-svg-icons": "6.4.2",
     "@vitest/coverage-v8": "^4.1.9",
+    "cpy-cli": "^5.0.0",
     "eslint": "^9.39.4",
     "globals": "^16.5.0",
     "postcss": "8.5",

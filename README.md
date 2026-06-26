@@ -165,9 +165,40 @@ function App (props) {
 
 ## SSR (Server-Side Rendering)
 
-solid-fa is compatible with SSR frameworks like [Solid Start](https://start.solidjs.com/) and [TanStack Start](https://tanstack.com/start).
+solid-fa supports SSR with [Solid Start](https://start.solidjs.com/) and [TanStack Start](https://tanstack.com/start). Because solid-fa ships a `solid` conditional export (uncompiled JSX source), SSR frameworks must recompile it — add `solid-fa` to `ssr.noExternal`.
 
-### Usage with SSR
+### TanStack Start
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import { tanstackStart } from '@tanstack/solid-start/plugin/vite'
+import viteSolid from 'vite-plugin-solid'
+
+export default defineConfig({
+  plugins: [tanstackStart(), viteSolid({ ssr: true })],
+  ssr: { noExternal: ['solid-fa'] },
+})
+```
+
+Full example: [examples/tanstack-start-ssr](https://github.com/Cweili/solid-fa/tree/master/examples/tanstack-start-ssr)
+
+### Solid Start
+
+```ts
+// app.config.ts
+import { defineConfig } from '@solidjs/start/config'
+
+export default defineConfig({
+  vite: { ssr: { noExternal: ['solid-fa'] } },
+})
+```
+
+Full example: [examples/solid-start-ssr](https://github.com/Cweili/solid-fa/tree/master/examples/solid-start-ssr)
+
+### Usage
+
+Usage is identical in both — just import and render:
 
 ```jsx
 import Fa from 'solid-fa'
@@ -177,8 +208,6 @@ function App () {
   return <Fa icon={faFlag} />
 }
 ```
-
-No additional configuration is needed — solid-fa automatically detects the SSR environment and skips client-only DOM operations.
 
 [fontawesome]: https://fontawesome.com/
 [fontawesome-npm]: https://www.npmjs.com/search?q=%40fortawesome%20svg%20icons

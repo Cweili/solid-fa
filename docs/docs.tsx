@@ -377,19 +377,41 @@ export default function Docs() {
 
       <DocsTitle title="SSR (Server-Side Rendering)" />
       <article>
-        solid-fa is compatible with SSR frameworks like{' '}
+        solid-fa supports SSR with{' '}
         <a href="https://start.solidjs.com/" target="_blank">Solid Start</a> and{' '}
         <a href="https://tanstack.com/start" target="_blank">TanStack Start</a>.
+        Add <code>solid-fa</code> to <code>ssr.noExternal</code> so the framework recompiles its JSX source.
       </article>
-      <DocsTitle title="Usage with SSR" level={3} />
-      <DocsCode code={`import Fa from 'solid-fa'
-import { faFlag } from '@fortawesome/free-solid-svg-icons'
 
-function App() {
-  return <Fa icon={faFlag} />
-}`} lang="js" />
+      <DocsTitle title="TanStack Start" level={3} />
+      <DocsCode code={`// vite.config.ts
+import { defineConfig } from 'vite'
+import { tanstackStart } from '@tanstack/solid-start/plugin/vite'
+import viteSolid from 'vite-plugin-solid'
+
+export default defineConfig({
+  plugins: [tanstackStart(), viteSolid({ ssr: true })],
+  ssr: { noExternal: ['solid-fa'] },
+})`} lang="js" />
       <article>
-        No additional configuration is needed — solid-fa automatically detects the SSR environment and skips client-only DOM operations.
+        Full example:{' '}
+        <a href="https://github.com/Cweili/solid-fa/tree/master/examples/tanstack-start-ssr" target="_blank">
+          examples/tanstack-start-ssr
+        </a>
+      </article>
+
+      <DocsTitle title="Solid Start" level={3} />
+      <DocsCode code={`// app.config.ts
+import { defineConfig } from '@solidjs/start/config'
+
+export default defineConfig({
+  vite: { ssr: { noExternal: ['solid-fa'] } },
+})`} lang="js" />
+      <article>
+        Full example:{' '}
+        <a href="https://github.com/Cweili/solid-fa/tree/master/examples/solid-start-ssr" target="_blank">
+          examples/solid-start-ssr
+        </a>
       </article>
     </div>
   );
