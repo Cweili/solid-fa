@@ -48,3 +48,23 @@ bower_components
 
 # Docs
 docs
+
+# Playwright test recordings
+.playwright-cli
+
+# IDE development documents
+.trae
+
+# Source files (consumers only need dist/)
+src
+
+# Example projects
+examples
+
+# Development config files
+eslint.config.js
+tsconfig.json
+tsconfig.jsx.json
+
+# Packed tarballs
+*.tgz
