@@ -34,14 +34,14 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "solid": "./dist/solid-fa.esm.js",
+      "solid": "./dist/index.js",
       "import": "./dist/solid-fa.esm.js",
       "require": "./dist/solid-fa.cjs.js",
       "default": "./dist/solid-fa.js"
     }
   },
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && tsc -p tsconfig.jsx.json && node copy-css.mjs",
     "build:docs": "vite build --config docs/vite.config.ts",
     "dev": "vite --config docs/vite.config.ts",
     "test": "vitest run --coverage",

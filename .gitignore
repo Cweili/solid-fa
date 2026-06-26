@@ -40,3 +40,11 @@ package-lock.json
 /dist
 /docs/dist
 /.trae
+
+# Playwright CLI
+.playwright-cli/
+
+# Example projects build artifacts
+examples/*/node_modules
+examples/*/dist
+examples/*/.output
