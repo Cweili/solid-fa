@@ -48,3 +48,5 @@ package-lock.json
 examples/*/node_modules
 examples/*/dist
 examples/*/.output
+examples/*/src/routeTree.gen.ts
+examples/*/app.config.timestamp_*
